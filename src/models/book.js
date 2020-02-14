@@ -28,8 +28,8 @@ module.exports = {
   updateData: (data, bookId) => {
     return new Promise((resolve, reject) => {
       connection.query('UPDATE book SET ? WHERE id = ?', [data, bookId], (error, result) => {
-            if (error) reject(new Error(error))
-            resolve(result)
+        if (error) reject(new Error(error))
+        resolve(result)
       })
     })
   }
