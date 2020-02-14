@@ -9,5 +9,33 @@ module.exports = {
       console.log(error)
     }
   },
-  
+  getDetail: async (request, response) => {
+    try {
+      const bookId = request.params.bookId
+      const result = await bookModel.getDetail(bookId)
+      response.json(result)
+    } catch (error) {
+      console.log(error)
+    }
+  },
+  insertData: async (request, response) => {
+    try {
+      const data = {
+        name: request.body.name,
+        writer: request.body.writer,
+        description: request.body.description,
+        publisher: request.body.publisher,
+        year: request.body.year,
+        stock: request.body.stock,
+        genre: request.body.genre,
+        created_at: new Date(),
+        updated_at: new Date()
+      }
+
+      const result = await bookModel.insertData(data)
+      response.json(result)
+    } catch (error) {
+      console.log(error)
+    }
+  }
 }

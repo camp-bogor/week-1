@@ -1,9 +1,13 @@
 const express = require('express')
 const Route = express.Router()
 
-const { getAll } = require('../controllers/book')
+const { getAll, getDetail, insertData } = require('../controllers/book')
 
 Route
   .get('/', getAll)
+  .get('/:bookId', getDetail)
+  .post('/', insertData)
+  .patch('/:bookId')
+  .delete('/:bookId')
 
 module.exports = Route
