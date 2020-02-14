@@ -1,0 +1,14 @@
+{
+  "name": "week-1",
+  "version": "1.0.0",
+  "description": "Restful with express",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "backend"
+  ],
+  "author": "Tatas Fachrul",
+  "license": "ISC"
+}
