@@ -36,7 +36,7 @@ module.exports = {
       const token = JWT.sign({
         email: dataUser.email,
         id: dataUser.id
-      }, JWT_KEY, { expiresIn: '1m' })
+      }, JWT_KEY, { expiresIn: '1h' })
 
       delete dataUser.salt
       delete dataUser.password
