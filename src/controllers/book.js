@@ -1,12 +1,14 @@
 const bookModel = require('../models/book')
+const miscHelper = require('../helpers')
 module.exports = {
   getAll: async (request, response) => {
     try {
       const searchName = request.query.name || ''
       const result = await bookModel.getAll(searchName)
-      response.json(result)
+      miscHelper.response(response, 200, result)
     } catch (error) {
       console.log(error)
+      miscHelper.customErrorResponse(response, 404, 'Internal server error!')
     }
   },
   getDetail: async (request, response) => {
