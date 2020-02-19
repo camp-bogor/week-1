@@ -6,7 +6,7 @@ const { getAll, getDetail, insertData } = require('../controllers/book')
 
 Route
   .get('/', getAll)
-  .get('/:bookId', authentication, authorization, getDetail)
+  .get('/:bookId', getDetail)
   .post('/', insertData)
   .patch('/:bookId')
   .delete('/:bookId')

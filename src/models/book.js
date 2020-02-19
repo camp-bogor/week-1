@@ -5,6 +5,7 @@ module.exports = {
     return new Promise((resolve, reject) => {
       connection.query(`SELECT * FROM book WHERE name LIKE '%${searchName}%'`, (error, result) => {
         if (error) reject(new Error(error))
+        console.log('Get from database')
         resolve(result)
       })
     })
