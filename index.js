@@ -19,8 +19,8 @@ const corsOptions = {
 }
 
 app.listen(port, () => console.log(`\n This server is running on port ${port}`))
-app.use(cors(corsOptions))
-// app.options(cors(co  rsOptions))
+app.use(cors())
+app.options(cors(corsOptions))
 app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
