@@ -47,5 +47,8 @@ module.exports = {
     } else {
       response.json({ message: 'Login error!' })
     }
+  },
+  forgotPassword: async (request, response) => {
+    response.send('Forgot password')
   }
 }
