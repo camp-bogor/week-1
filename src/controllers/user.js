@@ -50,5 +50,9 @@ module.exports = {
   },
   forgotPassword: async (request, response) => {
     response.send('Forgot password')
+  },
+
+  test: async(request, response) => {
+    response.send('test');
   }
 }
